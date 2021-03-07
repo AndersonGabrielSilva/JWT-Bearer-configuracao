@@ -10,8 +10,8 @@ namespace Shop.Repositories
         {   
             var users = new List<User>();
 
-            users.Add(new User {Id = 1, Username = "anderson", Password = "anderson"});
-            users.Add(new User {Id = 2, Username = "gabriel", Password = "gabriel"});
+            users.Add(new User {Id = 1, Username = "anderson", Password = "anderson", Role = "Gerente"});
+            users.Add(new User {Id = 2, Username = "gabriel", Password = "gabriel", Role = "Funcionario"});
 
             return users.Where(x => x.Username.ToLower() == username.ToLower() && x.Password.ToLower() == password.ToLower()).FirstOrDefault();
         }
